@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>视频</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				box-sizing:border-box;
+				font-family: "Yesteryear",cursive;
+			}
+			div{
+				display:block;
+			}
+			.container{
+				position:absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100vh;
+			}
+			.container .box{
+				position: absolute;
+				width: 100%;
+				height: 100vh;
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 1s;
+			}
+			.container .content{
+				padding: 20px;
+				margin: 20px;
+				z-index: 10;
+				opacity: 0;
+				transition: 1s;
+			}
+			.container .box:hover{
+				z-index: 1000;
+			}
+			.container .box video{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			.container .box.box1{
+				background: #00FFFF;
+				clip-path: polygon(0 0,33% 0,33% 100%,0% 100%);
+			}
+			.container .box.box2{
+				background: #FF0000;
+				clip-path: polygon(33% 0,67% 0,67% 100%,33% 100%);
+			}
+			.container .box.box3{
+				background: #7FFF00;
+				clip-path: polygon(67% 0,100% 0,100% 100%,67% 100%);
+			}
+			.container .content h2{
+				color: aliceblue;
+				font-size: 12vw;
+				font-weight: initial;
+			}
+			.pos{
+				position: fixed;
+				left: 50%;
+				top: 90%;
+				z-index: 10000;
+				color: #FFF;
+				font-size: 26px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="box box1">
+				<video src="vidoe/郭杰瑞纪录片：我以后想拍视频给美国人看中国！%20-%201.郭杰瑞无头条水印版(Av38094368,P1).mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
+				<div class="content">
+					<h2>1</h2>
+				</div>
+			</div>
+			<div class="box box2">
+				<video src="vidoe/成都“3口爆汗爆辣”重庆火锅，吃完直接辣成香肠嘴%20-%201.干精火旺(Av293491982,P1).mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
+				<div class="content">
+					<h2>2</h2>
+				</div>
+			</div>
+			<div class="box box3">
+				<video src="vidoe/2021-12-24%2017-44-18.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
+				<div class="content">
+					<h2>3</h2>
+				</div>
+			</div>
+		</div>
+		<a href="index.html" class="pos">返回主页</a>
+		<script>
+				let box=document.querySelectorAll(".box");
+				box.forEach(popup=>popup.addEventListener("click",()=>{
+					popup.classList.toggle('active')
+				}))	
+		</script>
+	</body>
+</html>
