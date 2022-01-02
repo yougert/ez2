@@ -6,32 +6,318 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 	<style type="text/css">
-		div{
-			width:100%;height:100%;background:#f2f2f2;
-		}
-		.image1{
-			margin-top: 150px;
-			width:50%;
-			padding: 0px;
-			display: flex;
-			flex-direction: row;
-		}
-		.image2{
-			margin-bottom: 350px;
-			margin-left: 950px;
-			width:50%;
-			padding: 0px;
-			display: flex;
-			flex-direction: row;
-		}
+		
+			      html,body{
+			      	    width:100%;
+			            	height:100%;
+			            	margin:0px;
+			            	overflow:hidden;
+			            }
+			            #mainDiv{
+			            	position:relative;
+			            	left:0px;
+			            	top:0px;
+			            	
+			      	    width:100%;
+			            	height:100%;
+			            	
+			            	transition:all 1s ease;
+			            }
+			            #mainDiv div{
+			      	    width:100%;
+			            	height:100%;
+			            	
+			            	background-repeat:no-repeat;
+			            	background-position:center;
+			            	background-size:cover;
+			            }
+			            .page1{
+			      	    align-content: center;
+			            }
+			            .page2{
+			      	    align-content: center;
+			            }
+			            .page3{
+			      	    align-content: center;
+			            }
+			            .btn_list{
+			      	    position:fixed;
+			            	top:30%;
+			            	right:50px;
+			            }
+			            ul{
+			      	    list-style-type:none;
+			            }
+			            li{
+			      	    width:20px;
+			            	height:20px;
+			            	margin-top:10px;
+			            	border-radius:20px;
+			            	background-color:#3D3D3D;
+			            	cursor:pointer;
+			            }
+			            #li0{
+			      	    background-color:#5555ff;
+			            }
+				  
+				 .span1{
+				 					  margin-left: 750px;
+				 					  font-size: 30px;
+				 }
+				 .button1{
+				     margin-left: 650px;
+				 }
+				 .button2{
+				     margin-left: 50px;
+				 }
+				 .vo{
+				 					  margin-left: 350px;
+				 					  width: 60%;
+				 }
+				 .image1{
+				     margin-left: 350px;
+				 					  width: 60%;
+				 }
+				 .image2{
+				 					  margin-left: 800px;
+				 					  width: 100px;
+				 					  height: 100px;
+				 					  font-size: 20px;
+				 					  color: crimson;
+				 }
+				 .class1{
+				 					  margin-left: 800px;
+				 					  font-size: 30px;
+				 					  color: black;
+				 					  font-weight: bold;
+				 }
+				 .class2{
+				 					  margin-top: 30px;
+				 					  margin-left: 200px;
+				 					  margin-right: 200px;
+				 					  font-size: 20px;
+				 }
+				 .class3{
+				 					  margin-top: 50px;
+				 					  margin-left: 250px;
+				 					  margin-right: 200px;
+				 					  font-size: 20px;
+				 }
+				 .class4{
+				 					  margin-top: 20px;
+				 					  margin-left: 210px;
+				 					  margin-right: 200px;
+				 					  font-size: 20px;
+				 					  font-weight: bold;
+				 }
+				 .class5{
+				 				
+				 					  margin-left: 888px;
+				 					  color: #000000;
+				 					  font-size: 20px;
+				 					  font-weight: bold;
+				 }
+				    a{color:#333;text-decoration:none; }
+				    a:hover {color:#CC3300;text-decoration:underline;}
+		
+		             .continer {
+		                    width:70px;
+		                  	height:20px;
+		                  	margin-top:10px;
+		                  	border-radius:20px;
+		                  	background-color:#3D3D3D;
+		                }
+		             
+		                .continer div {
+						  
+		                  display: none;      /*默认隐藏*/
+		                }
+		             
+		                .continer:hover div {
+		                  display: initial;      /*当鼠标hover时展示*/
+		                }
+		            
+		        
+			    
 		</style>
+		<script type="text/javascript">
+			function v1(){
+				document.getElementByID("vo1").play();
+			}
+			function v2(){
+				document.getElementByID("vo1").pause();
+			}
+			function v3(){
+				document.getElementByID("vo1").currentTime+=10();
+			}
+			function v4(){
+				document.getElementByID("vo1").currentTime-=10();
+			}
+			function v5(){
+				document.getElementByID("vo1").muted=!document.getElementByID("vo").muted;
+			}
+			</script>
 </head>
 <body>
-    <div>
-		<a href="1.html">
-		<img class="image1" src="img/3.1.png" ></a>
-		<img class="image2" src="img/3.3.png">
+    <div id="mainDiv" style="top: 0px; transition: all 1s ease 0s;">
+		<div class="page1">
+		<a id="sp" class="span1" href="index.html">返回主页</a>
+		<br>
+		<a id="sp" class="span1" href="index1.html">观看介绍视频</a>
+		<br>
+		<br>
+		<br>
+		<video class="vo" id="vo1" src="vidoe/郭杰瑞纪录片：我以后想拍视频给美国人看中国！%20-%201.郭杰瑞无头条水印版(Av38094368,P1).mp4"  controls="controls" poster="img/3.1.png"></video>
+		<input class="button1" type="button" value="播放" onclick="v1()"/>
+		<input class="button2" type="button" value="暂停" onclick="v2()"/>
+		<input class="button2" type="button" value="快进" onclick="v3()"/>
+		<input class="button2" type="button" value="后退" onclick="v4()"/>
+		<input class="button2" type="button" value="静音" onclick="v5()"/>
 		
-	</div>	
+		<p class="class1">重庆火锅之历史起源</p>
+		<p class="class2">重庆火锅又称毛肚火锅或麻辣火锅，是中国传统饮食方式之一，其起源于明末清初的重庆嘉陵江畔、该菜式也是朝天门等码头船工纤夫的粗放餐饮方式，其主要原料是牛毛肚、猪黄喉、鸭肠、牛血旺等。</p>
+		<p class="class2">2016年5月，“重庆火锅”当选为“重庆十大文化符号”之首，本次评选是按文化含量、知名度、美誉度、代表性、独特性、地域性、时代性7大标准进行评选。</p>
+		<p class="class5">基本介绍</p>
+		<p class="class3">二十年代在重庆江北城发展壮大。一般挑担子零卖小贩将水牛毛肚买后，洗净煮一煮而后将肝子、肚子等切成小块，于担头置泥炉一具，炉上置分格的大铁盆一只，盆内翻煎倒滚着一种又麻又辣又咸的卤汁，于是河边桥头一般卖劳力的工人，便围着担子受用起来。</p>
+		<p class="class3">各人认定一格且烫且吃，吃若干块，算若干钱，既经济，又能增加热量……直到民国二十三年，重庆城内才有一家小饭店将它高档化了，从担头移到桌上，泥炉依然，只将分格铁盆换成了赤铜小锅，卤汁、蘸汁也改为由食客自行配合，以求干净而适合重庆人的口味。</p>
+		<p class="class3">但不管是在重庆江北，还是重庆朝天门，重庆火锅发源于江边、码头之处却是不争的事实了。由于巴国、蜀国素有“尚滋味”、“好辛香”、用辣椒、花椒等调味的饮食习惯，后发展为小商贩挑担沿街叫卖。</p>
+		<p class="class3">重庆火锅随着改革春风迅速辐射全国。从西北戈壁腹地格尔木到东海之滨的国际大都会上海；从北国冰城哈尔滨到椰岛首府海口市，都布满了重庆火锅馆，到处都可以品尝到重庆火锅的独特风味。真可谓是重庆火锅红遍大江南北，魅力无限。</p>
+		<p class="class3">但正宗的重庆火锅一直的发展可谓是保守的，大型的重庆火锅技术向来不外传，一向以加盟形式在发展。加盟费少则几万，多则上百万，且店面都有严格的规定，店面少则百十平米，多则几千平米，不谈装修款，光是店面租金和加盟费就让居社会绝大数的中小投资者望火锅而心叹，——只有有钱人才敢想，才能做，才能加盟重庆火锅，才能赚火锅带来的滚滚财源。</p>
+		<p class="class3">据传大约在清道光年间，重庆的筵席上开始出现毛肚火锅。抗战时期，重庆的火锅餐饮有较大发展，大街小巷遍开火锅店，在二三十年代，重庆的鹿氏夫妇开办了三五火锅馆，其后又出现了著名的有云龙园、述园、一四一、不醉无归、桥头等等火锅店。在此基础上，演变为现代的重庆火锅。</p>
+		<p class="class5">食品由来</p>
+		<p class="class3">火锅是中国的传统饮食方式，起源于民间，历史悠久。重庆火锅，又称为毛肚火锅或麻辣火锅，其的由来是源于明末清初的重庆嘉陵江畔、朝天门等码头船工纤夫的粗放餐饮方式，后随着社会的发展，历史的变迁，人们的饮食习惯，重庆火锅的独特风味渐渐受人们的喜爱。</p>
+		<p class="class3">今日火锅的容器、制法和调味等，虽然已经历了上千年的演变，但一个共同点未变，就是用火烧锅，以水（汤）导热，煮（涮）食物。这种烹调方法早在商周时期已经出现，可以说它是火锅的雏形。</p>
+		<p class="class3">《韩诗外传》中记载，古代祭祀或庆典，要“击钟列鼎”而食，即众人围在鼎的周边，将牛羊肉等食物放入鼎中煮熟分食，这就是火锅的萌芽。历经秦、汉、唐代的演变，直到宋代才真正有了火锅的记载。</p>
+		<p class="class3">宋人林洪在其《山家清供》中提到吃火锅之事，即其所称的“拨霞供”，谈到他游五夷山，访师道，在雪地里得一兔子，无厨师烹制。“师云，山间只用薄批，酒、酱、椒料沃之。
+以风炉安桌上，用水半铫(半吊子)，候汤响一杯后（等汤开后），各分以箸，令自夹入汤摆（涮）熟，啖（吃）之，乃随意各以汁供（各人）随意沾食。”从吃法上看，它类似的“涮兔肉火锅”。</p>
+		<p class="class3">直到明清，火锅才真正兴盛起来。清乾隆四十八年正月初十，乾隆皇帝办了530桌宫廷火锅，其盛况可谓是当时中国火锅之最。
+清嘉庆皇帝登基时，曾摆“千叟宴”，所用火锅达到1550个，其规模堪称登峰造极，令人惊叹。</p>
+		<p class="class3">麻辣火锅发源于重庆，大约是在清道光年间，重庆的筵席上才开始有了毛肚火锅。重庆火锅历史悠久，从当年江北码头船工们自创的陶炉煮汤料烹制毛肚等无人问津的牛下水开始，到小贩们担着挑子沿街叫卖的“水八块”简易火锅，直至被宰房街马氏兄弟于民国十五年正式拉入饭店，逐渐成为主食。并历经了“抗战”、“文革”等历史时期的演变，经由“脸盆火锅”、“镶火锅”等品类的变进而逐渐形成历史。悠悠乎乎也历经百年，故而，成为山城的名片，也是情理之中的事。</p>
+		<p class="class3">在这一轮碰撞中，成都火锅显然处于下峰。在明明处于下峰状况之下，他会说：火锅由来已久，老祖宗几千年前就以鼎煮食，那不是火锅鼻祖？再者，想当年清嘉庆皇帝登基，早已摆出1550个火锅的千叟宴。
+那可是1796年的事。那阵你重庆火锅还在江边上陪船工们喝冷风呢。
+由此一想，则四川地区的火锅更愿意在泸州或宜宾江边上的船工们身上去找自家火锅的祖宗。此种状况，在巴、蜀还未分家之前是没有发生过的。</p>
+		<p class="class3">而在面对历史这份遗产的时候，两地的火锅态度是迥异的。重庆火锅因为更看重和在意这个老招牌，而将历史背成了一个包袱，被老字号老传统老工艺等一系列“老”字束缚，虽也曾以“老灶”等概念杀出一片江山。但与成都火锅相比，则明显迟暮了些。</p>
+		<p class="class3">后者不长的历史，反而成了轻装前进的理由。再加之成都深厚的川菜文化与火锅的兼容，则创造出了一大批在全国都具有较高知名度的火锅品牌，这些品牌都是由各式各样千奇百怪的新鲜火锅吃法作为支撑的。
+比之于重庆火锅“老三篇”的毛肚、黄喉、鸭肠来，成都火锅衍生出的火锅鸡、火锅鱼、鱼头火锅、肥兔火锅、牛筋火锅、龙马童子鸡羹锅、虫草鸭羹锅、海鲜火锅等品种口味和吃法各异的火锅。这种变化，反过来又刺激和影响着重庆火锅发展变化，使二者逐渐趋同</p>
+		<p class="class3">毛肚火锅的起源和由来，说法不一，它的由来和渊源，值得探讨。据老街坊说：毛肚火锅起源于清末民初，重庆码头和街边下力人吃的廉价实惠的街头大众饮食摊上的“水八块”。水八块全是牛的下杂（毛肚、肝腰和牛血旺），生切成薄片摆在几个菜品不同的碟子里，食摊泥炉上砂锅里煮起麻辣牛油的卤汁，食者自备酒，自选一格，站在摊前，拈起碟里的生片，且烫且吃。</p>
+		<p class="class3">至于纯粹地道的毛肚火锅，据老重庆们回忆，出现于民国十五年前后，发源地不是江北而是下半城南纪门的宰房街（现长江大桥桥坎下）。
+当年牛贩子多从川黔大路赶运菜牛来渝，在南岸过夜，翌日早过江，将牛赶到宰房街宰杀。
+有马氏兄弟廉价收购不易售出的牛毛肚和血旺，在下宰房街开了一家以毛肚为主要菜品仿市井“水八块”的制作和吃法的红汤毛肚火锅馆。将毛肚漂白洗净，去梗，外加一碟只是芝麻酱和蒜泥的调和。</p>
+		<p class="class3">据说，这就是重庆毛肚火锅的起源和得名。直到抗战时期，较场口街边仍有一马姓老妪开一家专供应毛肚的正宗毛肚火锅，碟中的牛毛肚按匹论价（每匹二分钱）。</p>
+		<p class="class3">正宗的麻辣毛肚火锅，毛肚的鲜嫩脆香，味道比其他牛猪的下杂远胜一筹，赢得食客赞扬。</p>
+		</div>
+		<div class="page2">
+		<div><img class="image1" src="img/3.2.jpg"></div>
+		<p class="class5">发展历程</p>
+		<p class="class3">由于重庆火锅的影响，四川地区的火锅逐渐兴盛起来，内容更加充实。四川地区的大部分火锅以重庆火锅为主流，各地火锅为支流一起汇合成一条美食之河。</p>
+		<p class="class3">随着岁月的推移，重庆火锅逐渐风靡全国名扬四方。出现了“德庄”、“小天鹅”、“秦妈”、“孔亮”、“苏大姐”、“奇火锅”等火锅大型品牌企业。
+获得中国驰名商标和著名商标的火锅企业10家，年营业额超亿元的火锅企业有17家，先后进入全国餐饮百强企业14家。
+在2005年度全国餐饮百强的20强火锅企业中，重庆占到11家。重庆举办的“万人火锅宴”摆放火锅餐桌1000桌以上，绵延1.3公里，30多万市民集聚现场，10多万人就餐，可谓场面宏大、世界罕见。</p>
+		<p class="class3">在北京，大大小小的火锅店雨后春笋般冒了出来；在上海，重庆火锅猛烈冲击上海滩；在南京，扎根大小饭店、百姓家；在深圳，“山城火锅”随处可见；在天津、昆明、贵阳、拉萨、西安……重庆火锅已流传全国，香飘四方，</p>
+		<p class="class3">远渡重洋，落户海外。
+渝都火锅不仅香飘国内大中城市、边陲小镇，而且作为渝菜烹饪文化远渡重洋，在日本和南洋落户。
+在港台，重庆火锅十分走红，在国外，如日本、美国、俄罗斯等，重庆火锅也有一定影响。</p>
+		<p class="class3">中国专门派深圳华夏小吃培训重庆火锅特级厨师陈大顺到日本去献艺，日本朋友十分的推崇，并且赞不绝口，认为毛肚火锅是“中国美食第一”，并称许远明为“毛肚火锅先生”。</p>
+		<p class="class3">足见重庆火锅的诱人魅力和影响。在日本东京、美国纽约、俄罗斯莫斯科等地，已经有重庆火锅营业，生意兴隆。</p>
+		</div>
+		<div class="page3">
+			<img class="image1" src="img/3.4.jpg">
+			<p class="class5">菜品多样</p>
+			<p class="class3">传统的毛肚火锅以牛的毛肚为主。正宗的毛肚火锅的菜品用的几乎都是牛身上的肝、心、舌、背柳肉片、血旺和莲白、蒜苗、葱节、豌豆尖等素菜。
+火锅选料包罗万象，菜品发展到几百种，囊括了食物王国里可食用之物，菜品已扩大到家禽、水产、海鲜、野味、动物内脏、各类蔬菜和干鲜菌果等。
+在毛肚火锅的基础上，发展到清汤火锅、鸳鸯火锅、啤酒鸭火锅、肥牛火锅、辣子鸡火锅等等，品种不下百余种，还有为外国人准备的西洋火锅。
+更加注重现代营养健康观念。传统火锅以厚味重油著称，则进行科学兑配，适量减少麻辣或改变用油使营养结构不断趋于合理。</p>
+			<p class="class5">调料独特</p>
+			<p class="class3">在制作配料上，最能代表渝味中麻辣烫的典型性格，正宗的毛肚火锅以厚味重油著称，传统汤汁的配制是选用郫县辣豆瓣、永川豆豉、甘孜的牛油、汉源花椒为原料。
+先将牛油放入旺火的锅中熬化，在把豆瓣剁碎倒入，待熬成酱红油后，加速炒香花椒，然后掺牛肉原汤，加进舂茸的豆豉和拍碎的冰糖、老姜，加川盐、醪糟和小辣椒熬制。
+又出现了啤酒风味、酸菜风味以及海鲜风味等味型，不同的火锅品种，有不同的火锅汤汁和不同的调味料，数量可达30多种。
+此外，附属重庆火锅的味碟也很多，可用麻油、蚝油、熟菜油、汤汁和味精、蒜泥、蛋清等调制而成，将烫好的菜品蘸着吃，既调和滋味，又降火生津。
+老火锅馆内，特制高大的桌凳，铁铜质的锅下，炭火熊熊，锅里汤汁翻滚，食客居高临下，虎视眈眈盯着锅中的菜品，举杯挥箸。尤其盛夏临锅，在炉火熏烤中汗流浃背，吃得起劲时脱掉上衣赤膊上阵。重庆人吃火锅的豪放与气吞山河之势是其他地区无法相比的，这正是巴渝饮食文化的体现，是古老巴民族勇武豪放性格和饮食文化心理的表现。</p>
+			<p class="class3">如今的重庆火锅已现代化了，火锅汤由传统的红汤发展到红白汤、海鲜汤、药膳汤、酸辣汤等；出现了全牛锅、全羊锅、龙飞凤舞锅、鱼头锅、鸭火锅、鸡火锅、山珍锅、粥底锅和冷火锅等。调味则出现了清油碟、麻油碟、干油碟、蒜油碟、茶油碟、蛋清碟等，美不胜收。
+当重庆火锅碰到成都火锅的时候，自然会有比较和争斗。虽不如足球的“渝川情结”那样直观火爆，但于无声处，却暗有各自的特色和独特味道。</p>
+			<p class="class5">文化碰</p>
+			<p class="class3">重庆人粗犷豪放，于是便有了创吉尼斯的直径达10米，宽积31吨，可供56人同时就餐的德庄大火锅。
+成都人幽默机趣，便有了“猪圈火锅”、“赖皮鱼”火锅和光头火锅之类的搞笑好玩的火锅和名称。
+重庆人处事耿直念旧，于是便有了流行数十年而不衰的老灶火锅。
+成都人喜欢新鲜事物，因此也就有了层出不穷花样翻新的各式火锅变种和衍生物。
+巴文化深层凝重勇武豪放，表现在火锅上的精神气质也是“大江东去式”的，重庆火锅也相应的粗犷豪放，肉食多以块大片厚著称，白菜用手撕，鳝鱼不洗不切，血淋淋整条往锅里煮。连火锅店的名字也气壮山河，如“巴将军”、“刘一手”、“不醉无归火锅”等，听来颇有重庆气质。
+蜀文化灵秀深邃，表现在火锅和饮食文化上，则颇有些“小桥流水”的意蕴。成都火锅店的装修和包装古朴雅致，而火锅的汤料和食品的炮制更为细致小巧。在成都，火锅被称之为“热盆景”，也与这种文化差异有关。而在店名选择上，也充分显示出蜀文化的特性，“皇城老妈”、“芙蓉国”、“狮子楼”等让人可感知一斑。</p>
+			<p class="class5">口味碰</p>
+			<p class="class3">火锅最终是用来吃的。因此口味非常重要。对于大多数巴蜀以外的食客来说，是很难在看似一模一样的“麻辣烫”之中找出什么差异的。但事实上，二者在口味上差异是非常大的，这就如同很多中国人美国人和俄罗斯人的长相那样，看着都是高鼻子大眼睛，但事实却有天壤之别。
+重庆火锅起源较早，口味较厚，以麻辣见长，对麻的感受永远不及对辣的渴望，属酱香型。
+成都火锅汤汁中名堂很多，即使最普遍的红味火锅，也以鸡、鱼、牛棒骨熬汤。在香味上，是以五香味和豆瓣味为主。
+二者最大的区别不在于烫的食物是什么，而是汤汁上。总体感觉，重庆火锅味道偏重，偏辣，成都火锅相对较淡，但追求麻辣的均衡。</p>
+			</div>
+			</div>
+			<div class="btn_list">
+				<ul>
+					<li id="li0" class="continer" style="background-color: rgb(85, 85, 255);">
+						<div>典型案例</div>
+						</li>
+						<li id="li1" class="continer" style="background-color: rgb(61, 61, 61);">
+							<div>相关症状</div>
+							</li>
+							<li id="li2" class="continer" style="background-color: rgb(61, 61, 61);">
+								<div>如何改善</div>
+								</li>
+								</ul>
+								</div>
+								<script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+								<script type="text/javascript">
+								
+										      
+										      		      var index = 0;//当前显示第几屏。0代表第1屏
+										      		            
+										      		            window.onload = function(){
+										      		          	  
+										      		          	  //为li添加鼠标点击事件
+										      		          	  for(var i=0;i<3;i++){
+										      		          		  document.getElementById("li"+i).onclick = function(){
+										      		          			  
+										      		          			  index = this.id.replace("li","");//通过id获取当前显示第几屏
+										      		          			  
+										      		          			  pageAnimate();
+										      		          		  }
+										      		          	  }
+										      		          	  
+										      		          	  //窗口大小重置
+										      		          	  window.onresize = function(){
+										      		          		  //暂时去掉mainDiv的过渡动画
+										      		          		  $("#mainDiv").css("transition","all 0s ease");
+										      		          		  
+										      		          		  pageAnimate();//切屏
+										      		          		  
+										      		          		  //重新加上mainDiv的过渡动画
+										      		          		  window.setTimeout(function(){
+										      		      				  $("#mainDiv").css("transition","all 1s ease");
+										      		      			  },10);
+										      		          	  }
+										      		            }
+										      		            //设置显示哪一屏，并设置右浮动按扭显示样式
+										      		            function pageAnimate(){
+										      		          	  
+										      		          	  var offsetHeight = document.body.offsetHeight;
+										      		          	  $("#mainDiv").css("top",-(offsetHeight * index)+"px");
+										      		      		  
+										      		          	  //设置右则浮动按扭的显示样式
+										      		      		  for(var i=0;i<=2;i++){
+										      		      			  $("#"+"li"+i).css("background-color","#3D3D3D");
+										      		      		  }
+										      		      		     $("#"+"li"+index).css("background-color","#5555ff");
+										      		            }
+										      					
+										      					  
+										      					  $(".button1").on("click",function(){
+										      							$("#vo1").trigger('play');
+										      						  }
+										      					  );    
+										      				      $(".button2").on("click",function(){
+										      				      		$("#vo1").trigger('pause');
+										      				      						  }
+										      				      );  
+										      		    
+										    </script>
+											
+
 </body>
 </html>
